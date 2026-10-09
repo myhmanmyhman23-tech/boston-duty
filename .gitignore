@@ -1,0 +1,17 @@
+node_modules/
+release/
+previews/
+research/
+*.zip
+*.log
+tests/*-result.txt
+tests/desktop-profile/
+verification.json
+.env
+.env.*
+!.env.example
+ai-settings.json
+*.pem
+*.key
+.DS_Store
+Thumbs.db

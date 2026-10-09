@@ -1,0 +1,2 @@
+const {contextBridge,ipcRenderer}=require('electron');
+contextBridge.exposeInMainWorld('desktop',{setAlwaysOnTop:value=>ipcRenderer.invoke('duty:top',value),setCompact:value=>ipcRenderer.invoke('duty:compact',value),dataPath:()=>ipcRenderer.invoke('duty:path'),setOpacity:value=>ipcRenderer.invoke('duty:opacity',value),setHotkey:value=>ipcRenderer.invoke('duty:hotkey',value),onOverlay:callback=>{ipcRenderer.on('duty:overlay',()=>callback());}});
